@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 enum TodoStatus {
   PENDING,
   CANCELED,
@@ -16,6 +18,8 @@ class Todo {
   DateTime createdAt;
 
   DateTime mustDoneAt;
+
+  DocumentReference reference;
 
   Todo({
     this.id,
