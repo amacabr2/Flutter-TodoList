@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluro/fluro.dart';
 import 'package:flutter_todo_list/components/Button.dart';
 import 'package:flutter_todo_list/routing/AppRoute.dart';
 import 'package:flutter_todo_list/routing/AppRouter.dart';
@@ -14,8 +13,6 @@ class TodosScreen extends StatefulWidget {
 }
 
 class _TodosScreenState extends State<TodosScreen> {
-  final _router = FluroRouter();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
