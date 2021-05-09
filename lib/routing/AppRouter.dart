@@ -10,7 +10,7 @@ class AppRouter {
 
   List<AppRoute> get routes => _routes;
 
-  const AppRouter({
+  AppRouter({
     @required List<AppRoute> routes,
     @required Handler notFoundHandler,
   })  : _routes = routes,

@@ -34,6 +34,7 @@ dependencies:
   equatable: ^2.0.0
   cupertino_icons: ^1.0.2
   fluro: ^2.0.3
+  form_validator: ^0.1.7
 
 dev_dependencies:
   flutter_test:
