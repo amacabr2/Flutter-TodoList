@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 class Button extends StatelessWidget {
-  Button({
-    @required this.index,
-    @required this.onPress,
-    @required this.text,
-    @required this.primary,
-    @required this.textColor
-  });
-
   final index;
   final VoidCallback onPress;
   final String text;
   final Color primary;
   final Color textColor;
+
+  Button({
+    @required this.index,
+    @required this.onPress,
+    @required this.text,
+    @required this.primary,
+    @required this.textColor,
+  });
 
   @override
   Widget build(BuildContext context) {

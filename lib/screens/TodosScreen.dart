@@ -4,9 +4,9 @@ import 'package:flutter_todo_list/routing/AppRoutes.dart';
 import 'package:flutter_todo_list/routing/AppRouter.dart';
 
 class TodosScreen extends StatefulWidget {
-  TodosScreen({Key key, this.title}) : super(key: key);
-
   final String title;
+
+  TodosScreen({Key key, this.title}) : super(key: key);
 
   @override
   _TodosScreenState createState() => _TodosScreenState();

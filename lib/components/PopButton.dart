@@ -3,9 +3,9 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter_todo_list/routing/AppRouter.dart';
 
 class PopButton extends StatelessWidget {
-  PopButton({@required this.appRoute});
-
   final AppRoute appRoute;
+
+  PopButton({@required this.appRoute});
 
   @override
   Widget build(BuildContext context) {
