@@ -25,13 +25,13 @@ class _TodoScreenState extends State<TodoScreen> {
         leading: PopButton(appRoute: AppRoutes.todosRoute),
       ),
       body: Center(
-        child: new SingleChildScrollView(
-           child: new Container(
+        child: SingleChildScrollView(
+           child: Container(
              child: FormBuilder(
              form: TODO_FORM,
-             onChanged: (dynamic response) => {
-                todo = Todo.fromForm(response.map((field) => {[field.key]: field.response}))
-             },
+             onChanged: (Map<String, dynamic> response) => setState(() {
+               this.todo = Todo.fromForm(response);
+             }),
              onValidate: () => {
                print(this.todo)
              },

@@ -4,7 +4,7 @@ import 'package:flutter_todo_list/components/Button.dart';
 
 class FormBuilder extends StatelessWidget {
   final String form;
-  final ValueChanged<dynamic> onChanged;
+  final ValueChanged<Map<String, dynamic>> onChanged;
   final VoidCallback onValidate;
 
   FormBuilder({
@@ -12,6 +12,12 @@ class FormBuilder extends StatelessWidget {
     @required this.onChanged,
     @required this.onValidate
   });
+
+  Map<String, dynamic> _computeResponse(dynamic response) {
+    Map<String, dynamic> mapResponse = {};
+    response.forEach((field) => mapResponse[field['key']] = field['response']);
+    return mapResponse;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +28,11 @@ class FormBuilder extends StatelessWidget {
             borderSide: BorderSide(width: 2, color: Colors.red)
         ),
         form: this.form,
-        onChanged: this.onChanged,
+        onChanged: (dynamic response) => this.onChanged(this._computeResponse(response)),
       ),
       new Button(
           index: 'validate-form',
-          text: 'Créer une tache',
+          text: 'Valider',
           primary: Colors.green,
           textColor: Colors.green,
           onPress: this.onValidate

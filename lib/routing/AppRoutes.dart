@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluro/fluro.dart';
+import 'package:flutter_todo_list/screens/AuthScreen.dart';
 import 'package:flutter_todo_list/screens/RouteNotFoundScreen.dart';
 import 'package:flutter_todo_list/screens/TodoScreen.dart';
 import 'package:flutter_todo_list/screens/TodosScreen.dart';
@@ -11,6 +12,13 @@ class AppRoutes {
 
         return RouteNotFoundScreen();
       });
+
+  static final authRoute = AppRoute(
+      '/auth',
+      Handler(
+          handlerFunc: (BuildContext context, Map<String, List<String>> params) => AuthScreen(),
+      )
+  );
 
   static final todosRoute = AppRoute(
     '/todos',
@@ -35,6 +43,7 @@ class AppRoutes {
   }
 
   static final List<AppRoute> routes = [
+    authRoute,
     todoRoute,
     todosRoute,
   ];
