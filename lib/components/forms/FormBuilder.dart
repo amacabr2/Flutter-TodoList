@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:json_to_form/json_to_form.dart';
 import 'package:flutter_todo_list/components/Button.dart';
 
-class Form extends StatelessWidget {
+class FormBuilder extends StatelessWidget {
   final String form;
   final ValueChanged<dynamic> onChanged;
   final VoidCallback onValidate;
 
-  Form({
+  FormBuilder({
     @required this.form,
     @required this.onChanged,
-    @required this.onValidate}
-  );
+    @required this.onValidate
+  });
 
   @override
   Widget build(BuildContext context) {

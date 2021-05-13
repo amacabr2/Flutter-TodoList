@@ -38,6 +38,11 @@ class Todo {
     createdAt: json['createdAt'] as DateTime,
     mustDoneAt: json['mustDoneAt'] as DateTime,
   );
+
+  factory Todo.fromForm(Map<String, dynamic> form) => Todo(
+    title: form['title'] as String,
+    description: form['description'] as String,
+  );
   
   Map<String, dynamic> toJson() => <String, dynamic>{
     'id': this.id,
